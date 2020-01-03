@@ -4,12 +4,12 @@ import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 import com.bdqn.meitao.jedis.dao.JedisDao;
-
 
 public class JedisDaoSingle implements JedisDao{
 	//Jedis jedis = new Jedis("192.168.1.199",6379);//我们依赖一个jedis，让spring给我们注入一个

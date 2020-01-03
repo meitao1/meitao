@@ -3,10 +3,12 @@ package com.bdqn.meitao.portal.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.bdqn.meitao.dao.ProductMapper;
 import com.bdqn.meitao.jedis.dao.JedisDao;
+import com.bdqn.meitao.pojo.Customer;
 import com.bdqn.meitao.pojo.Product;
 import com.bdqn.meitao.portal.service.ProductService;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -19,10 +21,12 @@ public class ProductServiceImpl implements ProductService {
 	@Autowired
 	private ProductMapper dao;
 	
+	/*@Qualifier*/
 	@Autowired
 	private JedisDao jedisClient;
 	//在redi的spring配置文件中，我们注入的是集群版的jedisCluster
-
+	
+	
 	@Override
 	public List<Product> getHot() {//拿畅销商品
 		ObjectMapper mapper = new ObjectMapper();

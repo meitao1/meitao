@@ -39,39 +39,36 @@
 			}
 		});  */ -->
 <script type="text/javascript">
+$.ajax({
+	type : 'get',
+	dataType : 'json',
+	url : 'gethot',
+	success : function(data){
+		var str="";
+		alert(data);
+        $.each(data,function(i,obj){
+        	str = str +'<dl><dt><a href="#"><img src="images/'+obj.picture+
+        	'"/></a></dt><dd class="name">'+obj.title+
+        	'</dd><dd>'+obj.productdesc+
+        	'</dd><dd><span class="discount">¥'+obj.originalprice+
+        	'</span>门店价<span class="price">¥'+obj.currentprice+
+        	'</span></dd></dl>'
+        	
+        	
+        	/* str = str + '<dl><dt><a href="#"><img src="images/'+obj.picture+
+        	'"/></a></dt><dd class="name">'+obj.title+
+        	'</dd><dd>'+obj.productdesc+
+        	'</dd><dd><span class="discount">¥'+obj.originalprice+
+	        '</span> 门店价<span class="price">¥'+obj.currentprice+'</span></dd></dl>' */
+        });
+        $("#pjson").html(str);
+		
+	},
+	error : function(error){
+		alert("请求失败！");
 
-$(function(){
-	$.ajax({
-		type : 'get',
-		dataType : 'json',
-		url : 'http://localhost:8081/httpclient',
-		success : function(data){
-			var str="";
-			alert(data);
-	        $.each(data,function(i,obj){
-	        	str = str +'<dl><dt><a href="#"><img src="images/'+obj.picture+
-	        	'"/></a></dt><dd class="name">'+obj.title+
-	        	'</dd><dd>'+obj.productdesc+
-	        	'</dd><dd><span class="discount">¥'+obj.originalprice+
-	        	'</span>门店价<span class="price">¥'+obj.currentprice+
-	        	'</span></dd></dl>'
-	        	
-	        	
-	        	/* str = str + '<dl><dt><a href="#"><img src="images/'+obj.picture+
-	        	'"/></a></dt><dd class="name">'+obj.title+
-	        	'</dd><dd>'+obj.productdesc+
-	        	'</dd><dd><span class="discount">¥'+obj.originalprice+
-		        '</span> 门店价<span class="price">¥'+obj.currentprice+'</span></dd></dl>' */
-	        });
-	        $("#pjson").html(str);
-			
-		},
-		error : function(error){
-			alert("请求失败！");
-
-		}
+	}
 });
-
 	/* $(function(){
 		alert("asdsa");
 		

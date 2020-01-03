@@ -43,13 +43,13 @@
 	</bean>
 
 	<!-- jedis客户端单机版 	-->
-	<bean id="jedisPool" class="redis.clients.jedis.JedisPool">
-		<constructor-arg name="host" value="192.168.1.24"></constructor-arg>
+	 <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+		<constructor-arg name="host" value="123.57.75.83"></constructor-arg>
 		<constructor-arg name="port" value="6379"></constructor-arg>
 		<constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
 	</bean>
 	
-	<bean id="jedisDao" class="com.bdqn.meitao.jedis.dao.impl.JedisDaoSingle"/>
+	<bean id="jedisDao" class="com.bdqn.meitao.jedis.dao.impl.JedisDaoSingle"/> 
 	
 	<!-- jedis集群版配置 -->
 	<!-- <bean id="jedisCluster" class="redis.clients.jedis.JedisCluster">
@@ -84,4 +84,35 @@
 		<constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
 	</bean> -->
 	
+	<!-- <bean id="jedisCluster" class="redis.clients.jedis.JedisCluster">
+		<constructor-arg name="nodes">
+			<set>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="123.57.75.83"></constructor-arg>
+					<constructor-arg name="port" value="6380"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="123.57.75.83"></constructor-arg>
+					<constructor-arg name="port" value="6381"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="123.57.75.83"></constructor-arg>
+					<constructor-arg name="port" value="6382"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="123.57.75.83"></constructor-arg>
+					<constructor-arg name="port" value="6383"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="123.57.75.83"></constructor-arg>
+					<constructor-arg name="port" value="6384"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="123.57.75.83"></constructor-arg>
+					<constructor-arg name="port" value="6385"></constructor-arg>
+				</bean>
+			</set>
+		</constructor-arg>
+		<constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
+	</bean> -->
 </beans>

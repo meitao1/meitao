@@ -17,6 +17,8 @@ public interface CustomerMapper {
     int insertSelective(Customer record);
 
     List<Customer> selectByExample(CustomerExample example);
+    
+    Customer selectUser(Customer record);
 
     Customer selectByPrimaryKey(Integer customerid);
 

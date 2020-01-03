@@ -41,7 +41,7 @@
   <!--导航结束-->
   <div id="content">
    <div id="register">
-      <form action="main" method="post">
+      <form action="zhu" method="post">
         <fieldset>
           <legend>注册新用户</legend>
           <ul>
@@ -130,7 +130,7 @@
       </form>
     </div>
     <div id="login">
-      <form>
+      <form action="main" method="post">
         <fieldset>
           <legend>登录MEITAO.COM</legend>
           <ul>
@@ -141,27 +141,29 @@
             <div  id="email">
               <p>
                 <label>邮箱：</label>
-                <input name="" type="text" class="txt" />
+                <input name="login" type="text" class="txt" />
               </p>
               <p>
                 <label>密码：</label>
-                <input name="" type="text" class="txt" />
+                <input name="pwd" type="text" class="txt" />
               </p>
               <p>
-                <input type="image" src="images/login.jpg" class="btn" />
+              <button type="submit">
+                <input type="image" src="images/login.jpg" class="btn" /></button>
                 <a href="#">忘记密码了？</a></p>
             </div>
             <div id="phone">
               <p>
                 <label>手机号：</label>
-                <input name="" type="text" class="txt" />
+                <input name="tel" type="text" class="txt" />
               </p>
               <p>
                 <label>密 码：</label>
-                <input name="" type="text" class="txt" />
+                <input name="pwd" type="text" class="txt" />
               </p>
               <p>
-                <input type="image" src="images/login.jpg" class="btn" />
+               <button type="submit"><input type="image" src="images/login.jpg" class="btn" /> </button>
+                
                 <a href="#">忘记密码了？</a></p>
             </div>
           </div>

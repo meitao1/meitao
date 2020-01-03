@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [02/Jan/2020:10:10:26 +0800] "GET / HTTP/1.1" 200 7590 http-bio-8080-exec-1 136
+0:0:0:0:0:0:0:1 - - [02/Jan/2020:10:10:26 +0800] "GET /images/login-sprite.png HTTP/1.1" 404 949 http-bio-8080-exec-3 30
+0:0:0:0:0:0:0:1 - - [02/Jan/2020:10:10:27 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-4 3
+0:0:0:0:0:0:0:1 - - [02/Jan/2020:10:30:02 +0800] "GET /product/list2?jsonpCallback=jQuery34103187535058016593_1577932199635&_=1577932199636 HTTP/1.1" 200 4588 http-bio-8080-exec-6 611
+0:0:0:0:0:0:0:1 - - [02/Jan/2020:10:58:33 +0800] "GET /product/list2?jsonpCallback=jQuery34109109991912672135_1577933911674&_=1577933911675 HTTP/1.1" 200 4588 http-bio-8080-exec-3 153
+0:0:0:0:0:0:0:1 - - [02/Jan/2020:10:58:49 +0800] "GET /product/list2?jsonpCallback=jQuery34104915086202515606_1577933927971&_=1577933927972 HTTP/1.1" 200 4588 http-bio-8080-exec-3 18
+0:0:0:0:0:0:0:1 - - [02/Jan/2020:14:46:12 +0800] "GET / HTTP/1.1" 200 7590 http-bio-8080-exec-1 544
+0:0:0:0:0:0:0:1 - - [02/Jan/2020:14:46:16 +0800] "GET /images/login-sprite.png HTTP/1.1" 404 949 http-bio-8080-exec-4 31
+0:0:0:0:0:0:0:1 - - [02/Jan/2020:14:46:16 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-5 5

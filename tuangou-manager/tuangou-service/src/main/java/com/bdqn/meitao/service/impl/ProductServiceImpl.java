@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bdqn.meitao.dao.ProductMapper;
+import com.bdqn.meitao.pojo.Customer;
 import com.bdqn.meitao.pojo.Product;
 import com.bdqn.meitao.service.ProductService;
 
@@ -14,6 +15,7 @@ public class ProductServiceImpl implements ProductService{
 
 	@Autowired
 	ProductMapper dao;
+	
 	
 	@Override
 	public List<Product> getByPage(int pageNo, int pageSize) {

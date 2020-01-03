@@ -92,6 +92,22 @@
     from customer
     where customerID = #{customerid,jdbcType=INTEGER}
   </select>
+  
+  <select id="selectUser" parameterType="com.bdqn.meitao.pojo.Customer"  resultMap="BaseResultMap">
+  	SELECT * FROM `customer`  
+  	<where>
+  		<if test="login != null and login !=''">
+  		and `login`= #{login}
+  		</if>
+  		<if test="tel != null and tel !=''">
+  		and `tel`= #{tel}
+  		</if>
+  		<if test="pwd != null and pwd !=''">
+  		and `pwd`= #{pwd}
+  		</if>
+  	</where>
+  	
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from customer
     where customerID = #{customerid,jdbcType=INTEGER}

@@ -21,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.bdqn.meitao.pojo.Customer;
 import com.bdqn.meitao.pojo.Product;
+import com.bdqn.meitao.portal.service.CustomerService;
 import com.bdqn.meitao.portal.service.ProductService;
 import com.bdqn.meitao.utils.HttpClientUtil;
 
@@ -29,6 +30,9 @@ public class PortalController {
  
 	@Autowired
 	private ProductService pService;
+	
+	@Autowired
+	private CustomerService Cservice;
 	
 	/*@RequestMapping("main")//main其实就代表着一个资源对应一个唯一的资源标识
 	public String main() {
@@ -44,7 +48,26 @@ public class PortalController {
 	public String main(Customer customer) {
 		System.out.println(customer.getPwd());
 		System.out.println(customer.getLogin());
+		System.out.println(customer.getTel());
+		Customer userCustomer= Cservice.selectUser(customer);
+		if (userCustomer!=null) {
+			System.out.println("登入成功");
+		}
+		System.out.println("登入失败");
+		return "main";
+	}	
+	
+	@RequestMapping("zhu")
+	public String mainzhu(Customer customer) {
+		System.out.println(customer.getPwd());
+		System.out.println(customer.getLogin());
 		System.out.println(customer.getCustomername());
+		int sum= Cservice.addUSer(customer);
+		if (sum>0) {
+			System.out.println("新建成功");
+			return "main";
+		}
+		System.out.println("失败");
 		return "main";
 	}	
 
